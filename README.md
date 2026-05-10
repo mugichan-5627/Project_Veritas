@@ -2,46 +2,56 @@
 
 An institutional-grade, multi-agent financial due diligence pipeline.
 
+## 🚀 Quick Start
+
+```bash
+git clone https://github.com/mugichan-5627/Project_Veritas.git
+cd Project_Veritas
+pip install -e .
+python scripts/download_db.py  # Get pre-built embeddings
+streamlit run app.py           # Launch the dashboard
+```
+
 ## Overview
 Project Veritas automates the heavy lifting of Private Equity due diligence. It leverages specialized Python extraction tools to pull high-fidelity TTM financials, compares them against CapIQ peer sets, validates margins and quality of earnings, and orchestrates a multi-agent LLM debate (Bull vs. Bear) to arrive at a final Investment Committee decision.
 
+## 🏆 AMD Pervasive AI Hackathon 2026
+Project Veritas demonstrates GPU-accelerated multi-agent AI applied to institutional finance workflows.
+- **LLM Inference**: Agents run on AMD MI300X GPUs via Fireworks AI/NVIDIA NIM infrastructure.
+- **Novelty**: Real-time IC debate logic, RAG over 40+ textbooks, and forensic red-flag detection.
+
 ## Setup
 
-1. **Clone and Install**
-   ```bash
-   git clone <repo>
-   cd Project_Veritas
-   pip install -e .
-   ```
+1. **Environment Variables**
+   Copy `.env.example` to `.env`:
+   - `NVIDIA_API_KEY` or `FIREWORKS_API_KEY`: For Llama 3.3 70B reasoning.
+   - `TAVILY_API_KEY`: For web search and peer discovery.
 
-2. **Environment Variables**
-   Copy `.env.example` to `.env` or set them in your terminal:
-   - `NVIDIA_API_KEY`: Required for LLM reasoning (meta/llama-3.3-70b-instruct)
-   - `TAVILY_API_KEY`: Required for web search and competitor discovery
-
-3. **Pre-built Embeddings (Recommended)**
-Instead of building the database from scratch, you can download the institutional-grade ChromaDB embeddings from Hugging Face:
-
-1. **Download the Database**: 
-   Visit huggingface.co/datasets/yoruzuya/project-veritas-knowledge-base/tree/main and download the `chroma_db/` folder.
-2. **Place in Project**: 
-   Move the folder to `project_veritas/memory/chroma_db/`.
-
-
+2. **Institutional Knowledge (Embeddings)**
+   The system relies on a specialized vector database. You have two options:
+   - **Recommended (Automated)**: Run `python scripts/download_db.py`.
+   - **Manual**: Download the `chroma_db/` folder from [Hugging Face](https://huggingface.co/datasets/yoruzuya/project-veritas-knowledge-base/tree/main) and place it in `project_veritas/memory/chroma_db/`.
+   - **Build from Scratch**: Run `python project_veritas/memory/build_vectordb.py --demo` to build a small sample database.
 
 ## Usage
 
-Run the full end-to-end pipeline on any US public equity ticker:
+### 📊 Web Dashboard (Recommended)
+Run the professional interactive dashboard to visualize the debate and final memo:
+```bash
+streamlit run app.py
+```
+
+### 💻 CLI Pipeline
+Run the full end-to-end orchestration on any US public ticker:
 ```bash
 python test_full_pipeline.py AMZN
-python test_full_pipeline.py MSFT
-python test_full_pipeline.py NVDA
 ```
 
 ## Architecture
 
-- `project_veritas/tools/financials.py`: YFinance TTM extraction and EDGAR fallback.
-- `project_veritas/tools/peers.py`: CapIQ and programmatic peer grouping.
-- `project_veritas/core/validation.py`: Data integrity and industry margin checks.
-- `project_veritas/memory/`: ChromaDB RAG layer for specialized financial rules.
-- `test_full_pipeline.py`: Main orchestration script integrating tools and LLM agents.
+- `project_veritas/agents/`: Logic for Orchestrator, Math, and IC Debate agents.
+- `project_veritas/tools/`: Financial extraction (yfinance/EDGAR) and peer analysis.
+- `project_veritas/memory/`: ChromaDB RAG layer for financial methodology.
+- `app.py`: Streamlit frontend for institutional reporting.
+- `docs/research/`: Background research, specifications, and versioning notes.
+- `evals/`: Historical evaluation outputs and ticker-specific memos.
