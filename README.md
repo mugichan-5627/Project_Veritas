@@ -19,12 +19,15 @@ Project Veritas automates the heavy lifting of Private Equity due diligence. It 
    - `NVIDIA_API_KEY`: Required for LLM reasoning (meta/llama-3.3-70b-instruct)
    - `TAVILY_API_KEY`: Required for web search and competitor discovery
 
-3. **Build the Vector Database**
-   The pipeline uses RAG to pull industry-specific valuation math. Build a demo database:
-   ```bash
-   python project_veritas/memory/build_vectordb.py --demo
-   ```
-   Or drop Damodaran/Rosenbaum textbooks into `project_veritas/memory/raw_textbooks/valuation_methodology/` and run without `--demo`.
+3. **Pre-built Embeddings (Recommended)**
+Instead of building the database from scratch, you can download the institutional-grade ChromaDB embeddings from Hugging Face:
+
+1. **Download the Database**: 
+   Visit huggingface.co/datasets/yoruzuya/project-veritas-knowledge-base/tree/main and download the `chroma_db/` folder.
+2. **Place in Project**: 
+   Move the folder to `project_veritas/memory/chroma_db/`.
+
+
 
 ## Usage
 
