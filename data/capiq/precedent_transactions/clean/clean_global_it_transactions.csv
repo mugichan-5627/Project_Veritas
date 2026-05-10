@@ -1,0 +1,18 @@
+target_name,transaction_id,"Announced Date
+MM/dd/yyyy",transaction_type,transaction_status,transaction_value_usd_m,buyer_name,seller_name,gics_industry,pct_equity_acquired,"Implied Enterprise Value/ Total Revenue
+(x)",target_ebitda_usd_m,"Total Transaction Value
+($M).1",change_in_control,ev_ebitda_multiple,target_company_type,geography,buyer_company_type,"Company Type
+(Seller)",sector_tag
+"Black Knight, Inc.",SPTRD1958009,2022-05-04 00:00:00,M&A - Whole,Completed,14774.446,"Intercontinental Exchange, Inc. (NYSE:ICE)","Black Knight, Inc. (:BKI)",Application Software,100,9.3347084219344,747.5,14774.446,Yes,16.46,,United States and Canada,"Intercontinental Exchange, Inc. (Public Company)",,it
+"CA, Inc.",SPTRD1460288,2018-07-11 00:00:00,M&A - Whole,Completed,18587.863677,Broadcom Inc. (NASDAQGS:AVGO),"CA, Inc. (:CA)",Systems Software,100,4.44741202459016,1194.0,18587.863677,Yes,13.91,,United States and Canada,Broadcom Inc. (Public Company),,it
+"CDK Global, Inc.",SPTRD1952869,2022-04-07 00:00:00,M&A - Whole,Completed,8267.895238,Brookfield Business Corporation (TSX:BBUC),"CDK Global, LLC",Application Software,100,4.70702831653857,547.9,8267.895238,Yes,15.09,,United States and Canada,Brookfield Business Corporation (Public Company),,it
+"Ebix, Inc.",SPTRD2105270,2024-05-28 00:00:00,M&A - Whole,Completed,743.157,Eraaya Lifespaces Limited (BSE:531035); Vikas Lifecare Limited (NSEI:VIKASLIFE); Vitasta Software India Private Limited,"Ebix, Inc. (:EBIX.Q)",Application Software,100,1.01023616588298,125.969,743.157,Yes,5.9,,United States and Canada,"Eraaya Lifespaces Limited (Public Company)
+
+Vikas Lifecare Limited (Public Company)",,it
+Fidessa group Plc,SPTRD1375732,2018-02-20 00:00:00,M&A - Whole,Terminated/Withdrawn,1847.58367090918,Temenos AG (SWX:TEMN),Fidessa Group Holdings Limited (:FDSA),Application Software,100,3.72903683025308,,1847.58367090918,Yes,14.82,,Europe,Temenos AG (Public Company),,it
+Gemalto N.V.,SPTRD1127863,2017-12-17 00:00:00,M&A - Whole,Completed,5891.65906314871,Thales S.A. (ENXTPA:HO),Gemalto N.V. (:GTO),Application Software,100,1.52596127241342,427.607271948907,5891.65906314871,Yes,9.41,,Europe,Thales S.A. (Public Company),,it
+Iress Limited,SPTRD1941621,2021-07-29 00:00:00,M&A - Whole,Terminated/Withdrawn,2439.41432273903,Eqt Fund Management S.à R.L.,Iress Limited (ASX:IRE),Application Software,100,5.90858747947608,,2439.41432273903,Yes,23.07,Iress Limited (Public Company),Asia-Pacific,,Iress Limited (Public Company),it
+"Luxoft Holding, Inc",SPTRD1526016,2019-01-07 00:00:00,M&A - Whole,Completed,1896.322631,DXC Technology Company (NYSE:DXC),"Luxoft Holding, Inc. (:LXFT)",IT Consulting and Other Services,100,,92.061,1896.322631,Yes,18.94,,Europe,DXC Technology Company (Public Company),,it
+"Priority Technology Holdings, Inc.",SPTRD2178646,2025-11-10 00:00:00,M&A - Minority,Announced,211.474263,,"Priority Technology Holdings, Inc. (NASDAQCM:PRTH)",Application Software,42,1.5604997813383,192.304,211.474263,No,2.62,"Priority Technology Holdings, Inc. (Public Company)",United States and Canada,,"Priority Technology Holdings, Inc. (Public Company)",it
+"Rackspace Hosting, Inc.",SPTRD215610,2016-08-05 00:00:00,M&A - Whole,Completed,4314.122481,"Apollo Global Management, Inc. (NYSE:APO)","Rackspace Technology Global, Inc. (:RAX)",IT Consulting and Other Services,100,2.12401007089804,690.9,4314.122481,Yes,6.51,,United States and Canada,"Apollo Global Management, Inc. (Public Company)",,it
+Zix Corporation,SPTRD1916939,2021-11-08 00:00:00,M&A - Whole,Completed,811.803227,Open Text Corporation (NASDAQGS:OTEX),Zix Corporation (:ZIXI),Application Software,100,,36.373,811.803227,Yes,22.32,,United States and Canada,Open Text Corporation (Public Company),,it

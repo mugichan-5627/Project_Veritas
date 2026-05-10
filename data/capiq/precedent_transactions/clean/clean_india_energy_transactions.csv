@@ -1,0 +1,33 @@
+Target/Issuer Name,MI Transaction ID,"Announced Date
+MM/dd/yyyy",Transaction Type,Transaction Status,"Total Transaction Value
+(₹M)",Buyers/Investors Name,Sellers Name,"Debt Percent of Total Value
+(%)","Target Debt Value
+(₹000)","Buyer: CIQ Net Debt
+(₹000)","Target: CIQ Net Debt
+(₹000)","Buyer: Total Revenue
+(₹000)","Buyer: EBITDA
+(₹000)","Target: CIQ Total Revenue
+(₹000)","Target: EBITDA
+(₹000)","Buyer: CIQ Cash and Short Term Investments
+(₹000)","Target: CIQ Cash and Short Term Investments
+(₹000)","Implied Enterprise Value/ EBITDA
+(x)","Implied Enterprise Value/ Total Revenue
+(x)","Recurring EBITDA Margin
+(%)","Return on Capital
+(%)",Transaction Industry (CIQ/GICS),"Company Type
+(Target/Issuer)","Company Type
+(Buyer/Investor)","Total Enterprise Value (CIQ) (₹M)
+(Target/Issuer) (> 1,000) [Current]","Total Enterprise Value (CIQ) (₹M)
+(Buyer/Investor) (> 1,000) [Current]","Total Enterprise Value (CIQ) (₹M)
+(Seller) (> 1,000) [Current]","Percent of Equity Ownership Acquired
+(%)",Transaction Geography,"Company Type
+(Seller)","Total Enterprise Value (CIQ) (₹M)
+(Target/Issuer) (< 50,000) [Current]","Total Enterprise Value (CIQ) (₹M)
+(Buyer/Investor) (< 50,000) [Current]","Total Enterprise Value (CIQ) (₹M)
+(Seller) (< 50,000) [Current]"
+Tulip Compression Private Limited,SPTRD2194957,2026-02-13,M&A - Whole,Announced,1190.1385,TIL Limited (NSEI:TIL),Gainwell Commosales Private Limited; Tulip Compression Private Limited,,,2769000,,,,1991174,,74500,,3.06365613869797,0.996178217975928,,,Oil and Gas Equipment and Services,,TIL Limited (Public Company),,"TIL Limited (19,546.5)",,60,Asia-Pacific,,,"TIL Limited (19,546.5)",
+Selan Exploration Technology Limited,SPTRD1948882,2022-03-17,M&A - Minority,Completed,287.714,Antelopus Selan Energy Limited (NSEI:ANTELOPUS),Selan Exploration Technology Limited (:530075),,,,-1843088,,,773091,,,1847393,11.656154495825,2.74216813669863,,,Oil and Gas Exploration and Production,Selan Exploration Technology Limited (Public Company),Antelopus Selan Energy Limited (Public Company),"Selan Exploration Technology Limited (17,349.5)","Antelopus Selan Energy Limited (20,679.4)","Selan Exploration Technology Limited (17,349.5)",26,Asia-Pacific,Selan Exploration Technology Limited (Public Company),"Selan Exploration Technology Limited (17,349.5)","Antelopus Selan Energy Limited (20,679.4)","Selan Exploration Technology Limited (17,349.5)"
+Essar Shipping Limited,SPTRD382857,2014-10-13,M&A - Minority,Terminated/Withdrawn,1065.132116,Essar Shipping & Logistics Limited,Essar Shipping Limited (BSE:533704),,,,,,,,,,,7.41186866110536,2.19432053837959,,,Oil and Gas Storage and Transportation,Essar Shipping Limited (Public Company),,"Essar Shipping Limited (21,999.1)",,"Essar Shipping Limited (21,999.1)",25.01,Asia-Pacific,Essar Shipping Limited (Public Company),"Essar Shipping Limited (21,999.1)",,"Essar Shipping Limited (21,999.1)"
+Seamec Limited,SPTRD867521,2014-04-22,M&A - Whole,Completed,653.423,HAL Offshore Limited,Coflexip Stena Offshore (Mauritius) Limited,,,,-1023610,,,4078370,,,1023610,5.67819175609267,0.555292923398318,,,Oil and Gas Equipment and Services,Seamec Limited (Public Company),,"Seamec Limited (41,366.0)",,,51,Asia-Pacific,,"Seamec Limited (41,366.0)",,
+Sah Petroleums Limited,SPTRD522568,2012-03-19,M&A - Whole,Terminated/Withdrawn,1083.35637712978,"SK Enmove Co., Ltd.",GP Petroleums Limited (NSEI:GULFPETRO),,,,,,,,,,,6.0855803916675,0.325321460403946,,,Oil and Gas Refining and Marketing,GP Petroleums Limited (Public Company),,"GP Petroleums Limited (1,815.2)",,"GP Petroleums Limited (1,815.2)",86.89,Asia-Pacific,GP Petroleums Limited (Public Company),"GP Petroleums Limited (1,815.2)",,"GP Petroleums Limited (1,815.2)"
+Sah Petroleums Limited,SPTRD652144,2008-10-20,M&A - Minority,Completed,426.8,Navis Capital Partners,GP Petroleums Limited (NSEI:GULFPETRO),,,,245184.471,,,2062589.009,,,490760.522,7.89667646594014,0.752452375741327,,,Oil and Gas Refining and Marketing,GP Petroleums Limited (Public Company),,"GP Petroleums Limited (1,815.2)",,"GP Petroleums Limited (1,815.2)",27.5,Asia-Pacific,GP Petroleums Limited (Public Company),"GP Petroleums Limited (1,815.2)",,"GP Petroleums Limited (1,815.2)"

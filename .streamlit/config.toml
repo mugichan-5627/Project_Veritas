@@ -1,0 +1,7 @@
+[server]
+# This prevents Streamlit from scanning site-packages, which causes the transformers warnings
+folderWatchBlacklist = [".*site-packages.*", ".*venv.*", ".*__pycache__.*"]
+runOnSave = true
+
+[client]
+showErrorDetails = false

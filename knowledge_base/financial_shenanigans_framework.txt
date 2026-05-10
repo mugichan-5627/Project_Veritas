@@ -1,0 +1,244 @@
+FINANCIAL SHENANIGANS — FORENSIC ACCOUNTING FRAMEWORK
+Source: Schilit, H. & Perler, J. "Financial Shenanigans" 
+(McGraw-Hill, 4th Edition)
+Purpose: Quality of Earnings analysis for PE due diligence
+
+════════════════════════════════════════════════════════
+SHENANIGAN #1 — RECORDING REVENUE TOO SOON
+════════════════════════════════════════════════════════
+Definition: Revenue recorded before it is earned or 
+before the earnings process is complete.
+
+Red Flags to check in target company filings:
+- Revenue growing faster than cash collections
+  (Accounts Receivable growing faster than Revenue)
+- Days Sales Outstanding (DSO) increasing year on year
+- Large revenue spikes in final quarter of fiscal year
+- Bill-and-hold arrangements disclosed in footnotes
+- Channel stuffing: inventory builds at distributors
+
+PE Diligence Tests:
+  DSO = (Accounts Receivable / Revenue) x 365
+  Flag if DSO increases >10 days year on year
+  
+  Revenue Quality Ratio = Cash from Operations / Net Income
+  Flag if ratio < 0.8 consistently
+
+Formula: AR Growth Rate vs Revenue Growth Rate
+  If AR Growth > Revenue Growth by >15%: RED FLAG
+
+Source: Schilit Chapter 2, pp.25-67
+
+════════════════════════════════════════════════════════
+SHENANIGAN #2 — RECORDING BOGUS REVENUE
+════════════════════════════════════════════════════════
+Definition: Revenue recorded that does not represent 
+legitimate arm's length transactions.
+
+Red Flags:
+- Related party transactions not at market rates
+- Round-trip transactions (cash sent out, cash received back)
+- Barter transactions recorded at inflated values
+- Revenue from sale of assets booked as operating revenue
+
+PE Diligence Tests:
+- Map all related party transactions from footnotes
+- Compare related party revenue % to total revenue trend
+- Check if major customers are also investors/promoters
+
+Source: Schilit Chapter 3, pp.68-95
+
+════════════════════════════════════════════════════════
+SHENANIGAN #3 — BOOSTING INCOME WITH ONE-TIME ITEMS
+════════════════════════════════════════════════════════
+Definition: Non-recurring gains presented as if they 
+are part of normal operating performance.
+
+Red Flags:
+- Gains on asset sales included in operating income
+- Litigation settlement gains boosting reported profit
+- Pension income inflating operating earnings
+- Restructuring charge reversals boosting income
+
+PE Adjustment Required (EBITDA Normalisation):
+  Adjusted EBITDA = Reported EBITDA
+    - One-time gains
+    + One-time charges (add back)
+    + Stock-based compensation
+    + Non-recurring restructuring costs
+    - Capitalised expenses that should be opex
+
+This is the "Quality of Earnings" adjustment that PE 
+firms require before accepting reported EBITDA figures.
+
+Source: Schilit Chapter 4, pp.96-128
+
+════════════════════════════════════════════════════════
+SHENANIGAN #4 — SHIFTING CURRENT EXPENSES TO LATER
+════════════════════════════════════════════════════════
+Definition: Costs that should be expensed immediately 
+are capitalised as assets, boosting current profits.
+
+Red Flags:
+- Capitalised software development costs growing rapidly
+- Capitalised customer acquisition costs
+- R&D capitalisation without clear asset definition
+- Depreciation life extended without business reason
+
+PE Diligence Tests:
+  Capitalisation Rate = Capex / (Capex + Operating Expenses)
+  Flag if rising year on year without revenue justification
+  
+  Compare depreciation life to industry peers:
+  If company uses 15yr life vs peer average of 8yr: RED FLAG
+
+Source: Schilit Chapter 5, pp.129-158
+
+════════════════════════════════════════════════════════
+SHENANIGAN #5 — FAILING TO RECORD LIABILITIES
+════════════════════════════════════════════════════════
+Definition: Obligations are kept off the balance sheet 
+or are underreported.
+
+Red Flags:
+- Operating leases not capitalised (pre-Ind AS 116)
+- Contingent liabilities buried in footnotes
+- Pension obligations underfunded
+- Warranty reserves declining while sales grow
+- Deferred revenue declining unexpectedly
+
+PE Adjustment Required:
+  Adjusted Net Debt = Reported Net Debt
+    + Capitalised Operating Leases (8x annual rent)
+    + Unfunded pension obligations
+    + Contingent liabilities (probability weighted)
+
+Source: Schilit Chapter 6, pp.159-189
+
+════════════════════════════════════════════════════════
+SHENANIGAN #6 — SHIFTING CURRENT REVENUE TO LATER
+════════════════════════════════════════════════════════
+Definition: Revenue is deferred artificially to smooth 
+earnings or manage analyst expectations.
+
+Red Flags:
+- Deferred revenue growing faster than billings
+- Revenue recognition policy changes in footnotes
+- Unusual growth in contract liabilities
+
+PE Context: Less common in Indian mid-market but 
+relevant for SaaS, subscription, and project-based 
+businesses.
+
+Source: Schilit Chapter 7, pp.190-210
+
+════════════════════════════════════════════════════════
+SHENANIGAN #7 — SHIFTING FUTURE EXPENSES TO CURRENT
+════════════════════════════════════════════════════════
+Definition: Taking large charges now to clear the path 
+for artificially clean future earnings.
+
+Red Flags:
+- Large restructuring charges every 2-3 years
+- "Kitchen sink" write-offs in transition quarters
+- Acquisition accounting used to create cookie jar reserves
+- In-process R&D write-offs at acquisition
+
+PE Context: Watch for this in carve-outs and turnarounds 
+where management has incentive to reset the baseline.
+
+Source: Schilit Chapter 8, pp.211-235
+
+════════════════════════════════════════════════════════
+CASH FLOW SHENANIGANS — THE MOST IMPORTANT SECTION
+════════════════════════════════════════════════════════
+Companies manipulate operating cash flow (OCF) because 
+sophisticated investors focus on OCF over net income.
+
+Key Manipulation Techniques:
+1. Boosting OCF by slowing payables (extending supplier 
+   payment terms inflates short-term OCF)
+2. Securitising receivables (moves AR off balance sheet,
+   boosting OCF artificially)
+3. Classifying operating cash outflows as investing 
+   (capex misclassification)
+
+PE Forensic Test — Cash Conversion Quality:
+  FCF Conversion = Free Cash Flow / EBITDA
+  Healthy range: 40-60% for Indian mid-market
+  Flag if: FCF Conversion < 30% for 2+ consecutive years
+  
+  Working Capital Intensity = 
+    (AR + Inventory - AP) / Revenue
+  Flag if increasing year on year (cash being consumed 
+  by operations, not generated)
+
+Source: Schilit Chapters 9-11, pp.236-310
+
+════════════════════════════════════════════════════════
+PE DUE DILIGENCE CHECKLIST — FINANCIAL SHENANIGANS
+════════════════════════════════════════════════════════
+Run these 8 tests on every target company:
+
+Test 1: Revenue Quality
+  Cash from Ops / Net Income > 0.8? 
+  YES = clean | NO = investigate
+
+Test 2: Receivables Health  
+  AR Growth vs Revenue Growth within 15%?
+  YES = clean | NO = possible revenue manipulation
+
+Test 3: EBITDA Normalisation
+  Adjusted EBITDA calculated removing all one-time items?
+  Document every adjustment with source
+
+Test 4: Off-Balance Sheet Liabilities
+  Operating leases capitalised at 8x annual rent?
+  Contingent liabilities probability-weighted?
+
+Test 5: Capitalisation Policy
+  Capex ratio benchmarked against sector peers?
+  Depreciation life vs industry standard?
+
+Test 6: Related Party Transactions
+  All RPTs mapped and assessed for arm's-length pricing?
+  RPT revenue % trend — increasing or stable?
+
+Test 7: Cash Conversion
+  FCF / EBITDA > 30% for last 3 years?
+  Working capital intensity stable or improving?
+
+Test 8: Accounting Policy Changes
+  Any revenue recognition or depreciation policy 
+  changes in last 3 years? If yes — why?
+
+════════════════════════════════════════════════════════
+INDIAN CONTEXT — ADDITIONAL RED FLAGS
+════════════════════════════════════════════════════════
+Specific to Indian listed and unlisted companies:
+
+1. Promoter pledge: High promoter share pledge 
+   indicates financial stress — check BSE disclosures
+   Flag if promoter pledge > 30% of holding
+
+2. Related party complexity: Indian family-owned 
+   businesses often have complex RPT structures
+   across group entities — map the full group
+
+3. Auditor changes: Auditor resignation or change 
+   to lesser-known firm is a major red flag in India
+
+4. MCA filing gaps: Check if annual returns filed 
+   on time with Ministry of Corporate Affairs
+   Late filings indicate governance issues
+
+5. Contingent liabilities from tax disputes: 
+   Indian companies frequently have large income 
+   tax and GST disputes — assess probability of loss
+
+These are not in Schilit (US-focused) but are 
+critical for Indian PE diligence.
+Applied by Indian PE funds: Kedaara, ChrysCapital, 
+Warburg Pincus India, Blackstone India.
+
+════════════════════════════════════════════════════════

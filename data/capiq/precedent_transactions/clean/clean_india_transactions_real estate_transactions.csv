@@ -1,0 +1,37 @@
+Target/Issuer Name,MI Transaction ID,"Announced Date
+MM/dd/yyyy",Transaction Type,Transaction Status,"Total Transaction Value
+(₹M)",Buyers/Investors Name,Sellers Name,"Debt Percent of Total Value
+(%)","Target Debt Value
+(₹000)","Buyer: CIQ Net Debt
+(₹000)","Target: CIQ Net Debt
+(₹000)","Buyer: Total Revenue
+(₹000)","Buyer: EBITDA
+(₹000)","Target: CIQ Total Revenue
+(₹000)","Target: EBITDA
+(₹000)","Buyer: CIQ Cash and Short Term Investments
+(₹000)","Target: CIQ Cash and Short Term Investments
+(₹000)","Implied Enterprise Value/ EBITDA
+(x)","Implied Enterprise Value/ Total Revenue
+(x)","Recurring EBITDA Margin
+(%)","Return on Capital
+(%)",Transaction Industry (CIQ/GICS),"Company Type
+(Target/Issuer)","Company Type
+(Buyer/Investor)","Total Enterprise Value (CIQ) (₹M)
+(Target/Issuer) (> 1,000) [Current]","Total Enterprise Value (CIQ) (₹M)
+(Buyer/Investor) (> 1,000) [Current]","Total Enterprise Value (CIQ) (₹M)
+(Seller) (> 1,000) [Current]","Percent of Equity Ownership Acquired
+(%)",Transaction Geography,"Company Type
+(Seller)","Total Enterprise Value (CIQ) (₹M)
+(Target/Issuer) (< 50,000) [Current]","Total Enterprise Value (CIQ) (₹M)
+(Buyer/Investor) (< 50,000) [Current]","Total Enterprise Value (CIQ) (₹M)
+(Seller) (< 50,000) [Current]"
+Prozone Realty Limited,SPTRD2123672,2024-12-31,M&A - Minority,Announced,1099.8947,,Nailsfield Limited,,,,3605193,,,1845128,,,614047,19.2906405602701,5.78176188969004,,,Diversified Real Estate Activities,Prozone Realty Limited (Public Company),,"Prozone Realty Limited (15,576.2)",,,28.83,Asia-Pacific,,"Prozone Realty Limited (15,576.2)",,
+IITL Projects Limited,SPTRD2067948,2024-02-14,M&A - Minority,Terminated/Withdrawn,12.97634,Advik Capital Limited (BSE:539773); Vikas Lifecare Limited (NSEI:VIKASLIFE),IITL Projects Limited (BSE:531968),,,,,,,,,,,15.7402347401429,63.3481489621267,,,Real Estate Development,IITL Projects Limited (Public Company),"Advik Capital Limited (Public Company)
+
+Vikas Lifecare Limited (Public Company)",,"Advik Capital Limited (2,501.0); Vikas Lifecare Limited (3,774.3)",,26,Asia-Pacific,IITL Projects Limited (Public Company),IITL Projects Limited (357.2),"Advik Capital Limited (2,501.0); Vikas Lifecare Limited (3,774.3)",IITL Projects Limited (357.2)
+Allcargo Multimodal Private Limited,SPTRD2069939,2024-02-02,M&A - Whole,Completed,2457.752402,BRE Asia Urban Holdings Ltd,Transindia Real Estate Limited (NSEI:TREL),,,,,,,455454.92,,,,4.00302019373703,4.00302019373703,,,Real Estate Operating Companies,,,,,"Transindia Real Estate Limited (6,495.9)",100,Asia-Pacific,Transindia Real Estate Limited (Public Company),,,"Transindia Real Estate Limited (6,495.9)"
+Ritesh Properties and Industries Limited,SPTRD1804407,2021-02-15,M&A - Minority,Completed,66.90739,Findoc Finvest Private Limited,Ritesh Spinning Mills Limited; Femella Fashions Limited,,,,-52922,,,1990754,,,166347,13.5751071935308,0.19506274661837,,,Real Estate Development,Hampton Sky Realty Limited (Public Company),,"Hampton Sky Realty Limited (4,641.2)",,,26.24,Asia-Pacific,,"Hampton Sky Realty Limited (4,641.2)",,
+Ritesh Properties and Industries Limited,SPTRD1805746,2021-02-15,M&A - Minority,Terminated/Withdrawn,90.3243,Findoc Finvest Private Limited,Hampton Sky Realty Limited (BSE:526407),,,,,,,,,,,19.834264138676,0.285001509372104,,,Real Estate Development,Hampton Sky Realty Limited (Public Company),,"Hampton Sky Realty Limited (4,641.2)",,"Hampton Sky Realty Limited (4,641.2)",26.000006,Asia-Pacific,Hampton Sky Realty Limited (Public Company),"Hampton Sky Realty Limited (4,641.2)",,"Hampton Sky Realty Limited (4,641.2)"
+Arvind Infrastructure Limited,SPTRD1222034,2015-05-14,M&A - Spinoff or Splitoff,Completed,1451.326053,,Arvind Limited (BSE:500101),,,,256846.818,,,612678.572,,,18135.414,7.234301,2.788041,,,Real Estate Development,Arvind SmartSpaces Limited (Public Company),,"Arvind SmartSpaces Limited (28,620.4)",,"Arvind Limited (117,608.6)",100,Asia-Pacific,Arvind Limited (Public Company),"Arvind SmartSpaces Limited (28,620.4)",,
+The Jamshri Ranjitsinghji Spinning and Weaving Mills Company Limited,SPTRD894909,2013-05-27,M&A - Minority,Completed,50.686347,,Jamshri Realty Limited (BSE:502901),,,,10150.375,,,442889.401,,,4768.95,6.94791752664774,0.331394826041457,,,Real Estate Operating Companies,Jamshri Realty Limited (Public Company),,"Jamshri Realty Limited (1,059.0)",,"Jamshri Realty Limited (1,059.0)",37.1,Asia-Pacific,Jamshri Realty Limited (Public Company),"Jamshri Realty Limited (1,059.0)",,"Jamshri Realty Limited (1,059.0)"
+Electra Financial Services Ltd.,SPTRD1818599,2007-04-17,M&A - Whole,Completed,7.349917,,Shri Krishna Devcon Limited (BSE:531080),,,,-2664.16,,,6745.675,,,9565.233,2.73905741121711,2.47369062399241,,,Real Estate Development,Shri Krishna Devcon Limited (Public Company),,"Shri Krishna Devcon Limited (1,573.7)",,"Shri Krishna Devcon Limited (1,573.7)",51.75,Asia-Pacific,Shri Krishna Devcon Limited (Public Company),"Shri Krishna Devcon Limited (1,573.7)",,"Shri Krishna Devcon Limited (1,573.7)"

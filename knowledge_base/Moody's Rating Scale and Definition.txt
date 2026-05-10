@@ -1,0 +1,120 @@
+Moody's Rating Scale and Definitions 
+Rating Scale and Definitions 
+Moody's Rating Scale 
+The following is a ranking (from highest to lowest) of Moody's long-term and short-term categories. The indicated relationship between long-term and short- term ratings is approximate and may not necessarily apply in all situations. 
+Non-Investment Grade 
+Investment Grade 
+Moody's Long-Term Rating Definitions 
+Moody's long-term obligation ratings are opinions of the relative credit risk of fixed- income obligations with an original maturity of one year or more. They address the pos- sibility that a financial obligation will not be honored as promised. Such ratings reflect both the likelihood of default and any financial loss suffered in the event of default. 
+Obligations rated Aaa are judged to be of the highest quality, with minimal risk. 
+Obligations rated Aa are judged to be of high quality and are subject to very low credit risk. 
+Aaa 
+Aa 
+Long-Term 
+Short-Term 
+Aaa 
+A 
+Aa1 
+P-1 
+Aa2 
+(Prime-1) 
+Aa3 
+Baa 
+A1 
+A2 
+A3 
+Ba 
+P-2 
+Baa1 
+(Prime-2) 
+Baa2 
+B 
+Baa3 
+P-3 
+(Prime-3) 
+Ba1 
+Caa 
+Ba2 
+Ba3 
+Ca 
+B1 
+B2 
+NP 
+B3 
+(Not Prime) 
+C 
+Caa1 
+Caa2 
+Caa3 
+Ca 
+C 
+Moody's Short-Term Rating Definitions 
+Moody's short-term ratings, unlike our long-term ratings, apply to an individual issuer's capacity to repay all short-term obligations rather than to specific short-term borrowing programs. Once assigned to an issuer, a short-term rating is global in scope; it applies to all the issuer's senior, unsecured obligations with an original maturity of less than one year regardless of the currency or market in which the obligations are issued. An exception to the global nature of these ratings occurs if an issuer's rating is supported by another entity through vehicles such as a letter of credit or guarantee. 
+Moody's employs the following designations, all judged to be investment grade, to indicate the relative repayment ability of rated issuers: 
+Issuers (or supporting institutions) rated Prime-1 have a superi- or ability to repay short-term debt obligations. 
+Issuers (or supporting institutions) rated Prime-2 have a strong ability to repay short-term debt obligations. 
+P-1 
+P-2 
+P-3 
+Issuers (or supporting institutions) rated Prime-3 have an acceptable ability to repay short-term obligations. 
+NP 
+Issuers (or supporting institutions) rated Not Prime do not fall within any of the Prime rating categories. 
+Obligations rated A are considered upper-medium-grade and are sub- ject to low credit risk. 
+Obligations rated Baa are subject to moderate credit risk. They are consid- ered medium-grade and as such may possess speculative characteristics. 
+Obligations rated Ba are judged to have speculative elements and are subject to substantial credit risk. 
+Obligations rated B are considered speculative and are subject to high credit risk. 
+Obligations rated Caa are judged to be of poor standing and are subject to very high credit risk. 
+Obligations rated Ca are highly speculative and are likely in, or very near, default, with some prospect of recovery in principal and interest. 
+Obligations rated are the lowest-rated class of bonds and are typical- ly in default, with little prospect for recovery of principal and interest. 
+Note: Moody's appends numerical modifiers 1, 2, and 3 to each generic rating classifica- tion from Aa through Caa. The modifier 1 indicates that the obligation ranks in the higher end of its generic rating category; the modifier 2 indicates a mid-range ranking; and the modifier 3 indicates a ranking in the lower end of that generic rating category. 
+Bank Financial Strength Rating Definitions 
+A Banks rated A possess superior intrinsic financial strength. Typically, they will be institutions with highly valuable and defensible business franchises, strong financial fundamentals, and a very predictable, stable operating environment. 
+B Banks rated B possess strong intrinsic financial strength. Typically, they will 
+be institutions with valuable and defensible business franchises, good finan- cial fundamentals, and a predictable and stable operating environment. 
+C Banks rated C possess adequate intrinsic financial strength. Typically, they 
+will be institutions with more limited but still valuable business franchises. These banks will display either acceptable financial fundamentals within a predictable and stable operating environment, or good financial fundamentals within a less predictable and stable operating environment. 
+D Banks rated D display modest intrinsic financial strength, potentially requiring 
+some outside support at times. Such institutions may be limited by one or more of the following factors: a weak business franchise; financial funda- mentals that are deficient in one or more respects; or an unpredictable and unstable operating environment. 
+E Banks rated E display very modest intrinsic financial strength, with a high like- lihood of periodic outside support or an eventual need for outside assis- tance. Such institutions may be limited by one or more of the following fac- tors: a weak and limited business franchise; financial fundamentals that are materially deficient in one or more respects; or a highly unpredictable or unstable operating environment. 
+About Moody's and Our Rating Products 
+Types of Ratings 
+Long-Term Debt Ratings 
+Opinions of relative credit risk of fixed-income obligations with an original maturity of one year or more. These ratings address the pos- sibility that a financial obligation will not be honored as promised. Such ratings reflect both the likelihood of default and any financial loss suffered in the event of default. 
+Short-Term Ratings 
+Opinions of the ability of issuers to honor short-term financial obliga- tions which generally have an original maturity not exceeding 13 months. 
+Issuer Ratings 
+Opinions of the ability of entities to honor senior unsecured financial obligations and contracts. 
+Corporate Family Ratings 
+Moody's Corporate Family Ratings are generally employed for specu- lative grade corporate issuers. A Corporate Family Rating is an opin- ion of a corporate family's ability to honor all of its financial obliga- tions and is assigned to a corporate family as if it had: 
+a single class of debt 
+a single consolidated legal entity structure. 
+A Corporate Family Rating does not reference an obligation or class of debt and thus does not reflect priority of claim. It applies to all affiliates under the management control of the entity to which it is assigned. Moody's employs the general long-term rating scale for Corporate Family Ratings. 
+Bank Ratings 
+Moody's will typically assign two ratings to a bank - Bank Deposit Ratings and Bank Financial Strength Ratings. 
+Bank Deposit Ratings Opinions of a bank's ability to repay punctually its foreign and/or domestic currency deposit obligations. Moody's deposit ratings are intended to incorporate those aspects of credit risk that are relevant to the prospective payment performance of the rated bank with respect to its foreign and/or domestic currency deposit obligations. 
+Bank Financial Strength Ratings Opinions of a bank's intrinsic safe- ty and soundness and, as such, exclude certain external credit risks and credit support elements that are addressed by Moody's Bank Deposit Ratings. 
+Insurance Financial Strength Ratings 
+Opinions of the ability of insurance companies to repay punctually senior policyholder claims and obligations. 
+National Scale Ratings 
+Opinions of the relative creditworthiness of issuers and issues within a particular country. National Scale Ratings are not designed to be compared among countries. 
+Money Market and Bond Fund Ratings 
+Opinions of the investment quality of shares in mutual funds and similar investment vehicles which principally invest in short-term and long-term fixed-income obligations, respectively. 
+About the Company 
+Moody's Investors Service is among the world's most respected, widely utilized sources for credit ratings, research and risk analysis. In addition to our core ratings business, Moody's publishes market- leading credit opinions, deal research and commentary, serving more than 9,300 customer accounts at some 2,400 institutions around the globe. 
+Moody's independence and integrity have earned us the trust of capi- tal market participants worldwide. Our ratings and analysis track debt covering more than: 
+100 sovereign nations 
+12,000 company issuers 
+29,000 public finance issuers 
+96,000 structured finance obligations 
+Credit ratings and research help investors analyze the credit risks associated with fixed-income securities. Such independent credit rat- ings and research also contribute to efficiencies in fixed-income mar- kets and other obligations, such as insurance policies and derivative transactions, by providing credible and independent assessments of credit risk. 
+Moody's default studies validate our predictive ratings. Published research and investor briefings, that draw thousands of attendees each year, keep investors current with the rationale for our credit opinions. 
+In addition to its ratings services, Moody's publishes investor-oriented credit research, including in-depth research on major debt issuers, industry studies, special comments and credit opinion handbooks. While research, analysis and data are delivered through a number of channels, most of Moody's clients use www.moodys.com for access to such services in a real-time environment. 
+Moody's maintains offices in most of the world's major financial cen- ters and employs approximately 3,000 people worldwide, including more than 1,000 analysts. The firm also has expanded into develop- ing markets through joint ventures or affiliation agreements with local rating agencies. 
+Customers include a wide range of corporate and governmental issuers of securities as well as institutional investors, depositors, creditors, investment banks, commercial banks, and other financial intermediaries. 
+About Moody's Corporation 
+Moody's Corporation (NYSE:MCO) is the parent company of the Moody's Investors Service credit rating agency, the Moody's KMV quantitative credit risk analysis business, and Moody's Economy.com, a provider of economic research and data services. The corporation, which reported revenue of $2.0 billion in 2006, employs approximately 3,000 people worldwide and maintains offices in 
+27 countries. 
+M 
+Moody's 
+Asia Pacific 
+Desktop Reference 

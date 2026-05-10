@@ -1,0 +1,32 @@
+Target/Issuer Name,MI Transaction ID,"Announced Date
+MM/dd/yyyy",Transaction Type,Transaction Status,"Total Transaction Value
+(₹M)",Buyers/Investors Name,Sellers Name,"Debt Percent of Total Value
+(%)","Target Debt Value
+(₹000)","Buyer: CIQ Net Debt
+(₹000)","Target: CIQ Net Debt
+(₹000)","Buyer: Total Revenue
+(₹000)","Buyer: EBITDA
+(₹000)","Target: CIQ Total Revenue
+(₹000)","Target: EBITDA
+(₹000)","Buyer: CIQ Cash and Short Term Investments
+(₹000)","Target: CIQ Cash and Short Term Investments
+(₹000)","Implied Enterprise Value/ EBITDA
+(x)","Implied Enterprise Value/ Total Revenue
+(x)","Recurring EBITDA Margin
+(%)","Return on Capital
+(%)",Transaction Industry (CIQ/GICS),"Company Type
+(Target/Issuer)","Company Type
+(Buyer/Investor)","Total Enterprise Value (CIQ) (₹M)
+(Target/Issuer) (> 1,000) [Current]","Total Enterprise Value (CIQ) (₹M)
+(Buyer/Investor) (> 1,000) [Current]","Total Enterprise Value (CIQ) (₹M)
+(Seller) (> 1,000) [Current]","Percent of Equity Ownership Acquired
+(%)",Transaction Geography,"Company Type
+(Seller)","Total Enterprise Value (CIQ) (₹M)
+(Target/Issuer) (< 50,000) [Current]","Total Enterprise Value (CIQ) (₹M)
+(Buyer/Investor) (< 50,000) [Current]","Total Enterprise Value (CIQ) (₹M)
+(Seller) (< 50,000) [Current]"
+Weizmann Forex Limited,SPTRD1524362,2019-01-02,M&A - Whole,Completed,4917.62212,EbixCash World Money Limited,Delphi World Money Limited (NSEI:DELPHIFX),,,38748338.4,520153,,11340795.9694254,76997706,,12455476.8,668863,10.732283821562,0.0860562455717837,,,Consumer Finance,Delphi World Money Limited (Public Company),,"Delphi World Money Limited (2,012.8)",,"Delphi World Money Limited (2,012.8)",100,Asia-Pacific,Delphi World Money Limited (Public Company),"Delphi World Money Limited (2,012.8)",,"Delphi World Money Limited (2,012.8)"
+Ebixcash World Money India Limited,SPTRD1886071,2019-01-01,M&A - Minority,Completed,886.86048,EbixCash World Money Limited,Delphi World Money Limited (NSEI:DELPHIFX),,,46296237,-283300,,11809758.3893655,91893824,,6680182.56,842811,10.35756698391,0.0830515985891839,,,Consumer Finance,Delphi World Money Limited (Public Company),,"Delphi World Money Limited (2,012.8)",,"Delphi World Money Limited (2,012.8)",25.16,Asia-Pacific,Delphi World Money Limited (Public Company),"Delphi World Money Limited (2,012.8)",,"Delphi World Money Limited (2,012.8)"
+Wall Street Finance Limited,SPTRD977013,2017-11-03,M&A - Whole,Terminated/Withdrawn,591.24268,DiGiSPICE Technologies Limited (NSEI:DIGISPICE),Patel Integrated Logistics Limited (BSE:526381); Smartvalue Ventures Private Limited; Stocktalks Pvt Ltd,,,,,,,,,,,11.1876074780503,1.25510311609078,,,Consumer Finance,WSFx Global Pay Limited (Public Company),DiGiSPICE Technologies Limited (Public Company),,"DiGiSPICE Technologies Limited (1,616.8)",,100,Asia-Pacific,Patel Integrated Logistics Limited (Public Company),WSFx Global Pay Limited (-103.2),"DiGiSPICE Technologies Limited (1,616.8)",Patel Integrated Logistics Limited (624.1)
+Indian Energy Exchange Limited,SPTRD301658,2014-11-06,M&A - Minority,Terminated/Withdrawn,5768.447905,TVS Capital Funds Limited; Kiran Vyapar Limited (BSE:537750); TVS Shriram Growth Fund I; Agri Power and Engineering Solutions Private Limited,63 moons technologies limited (BSE:526881),,,,,,,,,,,14.553518591211,11.2616218294523,,,Financial Exchanges and Data,Indian Energy Exchange Limited (Public Company),Kiran Vyapar Limited (Public Company),"Indian Energy Exchange Limited (98,252.1)","Kiran Vyapar Limited (9,347.4)","63 moons technologies limited (12,234.7)",25.64,Asia-Pacific,63 moons technologies limited (Public Company),,"Kiran Vyapar Limited (9,347.4)","63 moons technologies limited (12,234.7)"
+ICRA Limited,SPTRD344818,2014-02-21,M&A - Minority,Completed,5171.3328,Moody's Singapore Pte. Ltd.,ICRA Limited (NSEI:ICRA),,,,-491805,,,2829622,,,656551,27.6421395167301,8.30959470911662,,,Financial Exchanges and Data,ICRA Limited (Public Company),,"ICRA Limited (41,491.2)",,"ICRA Limited (41,491.2)",26.5,Asia-Pacific,ICRA Limited (Public Company),"ICRA Limited (41,491.2)",,"ICRA Limited (41,491.2)"

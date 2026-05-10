@@ -1,0 +1,30 @@
+# requirements.txt — Project Veritas Dependencies
+# ─────────────────────────────────────────────────────────────────────
+# These are the external Python libraries ("vendors") our project needs.
+# Install all of them at once by running:
+#     pip install -r requirements.txt
+#
+# PHASE 0 (Math Validation) — what we need right now:
+# ─────────────────────────────────────────────────────────────────────
+pytest>=7.4.0              # Test framework — runs our evolve-back tests
+numpy>=1.24.0              # Numerical math — arrays, linear algebra
+pandas>=2.0.0              # Data tables — reads Excel files, manipulates data
+openpyxl>=3.1.0            # Excel reader — lets pandas read .xlsx files
+xlrd>=2.0.0                # Legacy Excel reader — lets pandas read .xls files
+
+# ─────────────────────────────────────────────────────────────────────
+# PHASE 1 (Valuation Agent) — added for agent tool-use loop:
+# ─────────────────────────────────────────────────────────────────────
+anthropic>=0.25.0            # Claude API — powers the agent tool-use loop
+tavily-python>=0.3.0         # Web search fallback (Phase 1)
+yfinance>=0.2.0              # Indian stock market data (NSE/BSE)
+
+# ─────────────────────────────────────────────────────────────────────
+# PHASE 2+ (Memory + RAG)
+# ─────────────────────────────────────────────────────────────────────
+chromadb>=0.4.0
+sentence-transformers>=2.2.0
+pypdf2>=3.0.0
+langchain>=0.1.0
+langchain-community>=0.0.1
+scipy>=1.11.0             # Advanced math (Newton-Raphson for IRR)

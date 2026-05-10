@@ -1,0 +1,35 @@
+Target/Issuer Name,MI Transaction ID,"Announced Date
+MM/dd/yyyy",Transaction Type,Transaction Status,"Total Transaction Value
+(₹M)",Buyers/Investors Name,Sellers Name,"Debt Percent of Total Value
+(%)","Target Debt Value
+(₹000)","Buyer: CIQ Net Debt
+(₹000)","Target: CIQ Net Debt
+(₹000)","Buyer: Total Revenue
+(₹000)","Buyer: EBITDA
+(₹000)","Target: CIQ Total Revenue
+(₹000)","Target: EBITDA
+(₹000)","Buyer: CIQ Cash and Short Term Investments
+(₹000)","Target: CIQ Cash and Short Term Investments
+(₹000)","Implied Enterprise Value/ EBITDA
+(x)","Implied Enterprise Value/ Total Revenue
+(x)","Recurring EBITDA Margin
+(%)","Return on Capital
+(%)",Transaction Industry (CIQ/GICS),"Company Type
+(Target/Issuer)","Company Type
+(Buyer/Investor)","Total Enterprise Value (CIQ) (₹M)
+(Target/Issuer) (> 1,000) [Current]","Total Enterprise Value (CIQ) (₹M)
+(Buyer/Investor) (> 1,000) [Current]","Total Enterprise Value (CIQ) (₹M)
+(Seller) (> 1,000) [Current]","Percent of Equity Ownership Acquired
+(%)",Transaction Geography,"Company Type
+(Seller)","Total Enterprise Value (CIQ) (₹M)
+(Target/Issuer) (< 50,000) [Current]","Total Enterprise Value (CIQ) (₹M)
+(Buyer/Investor) (< 50,000) [Current]","Total Enterprise Value (CIQ) (₹M)
+(Seller) (< 50,000) [Current]"
+Mac Charles (India) Limited,SPTRD828555,2016-10-21,M&A - Whole,Completed,5700.556738,Embassy Property Developments Private Limited,Mac Charles (India) Limited (BSE:507836),,,,-473758.406,,,716214.804,,,478324.092,24.8391855784092,11.596714666624,,,Renewable Electricity,Mac Charles (India) Limited (Public Company),,"Mac Charles (India) Limited (19,038.8)",,"Mac Charles (India) Limited (19,038.8)",73.390967,Asia-Pacific,Mac Charles (India) Limited (Public Company),"Mac Charles (India) Limited (19,038.8)",,"Mac Charles (India) Limited (19,038.8)"
+Simhadri Power Limited,SPTRD394280,2013-04-22,M&A - Whole,Completed,1585.307263,Steel Exchange India Limited (BSE:534748),Simhadri Power Limited,,,3511982.636,,,,,,482614.15,,15.9352204294238,6.07517279321275,,,Electric Utilities,,Steel Exchange India Limited (Public Company),,"Steel Exchange India Limited (15,925.4)",,60.79,Asia-Pacific,,,"Steel Exchange India Limited (15,925.4)",
+Orient Green Power Company Limited,SPTRD476230,2013-02-22,M&A - Minority,Completed,1069.04769,SVL Limited,Orient Green Power Company Limited (NSEI:GREENPOWER),,,,18703261.705,,,4354503.494,,,728594.882,34.8253911439333,8.48805658909062,,,Renewable Electricity,Orient Green Power Company Limited (Public Company),,"Orient Green Power Company Limited (15,867.8)",,"Orient Green Power Company Limited (15,867.8)",31.55,Asia-Pacific,Orient Green Power Company Limited (Public Company),"Orient Green Power Company Limited (15,867.8)",,"Orient Green Power Company Limited (15,867.8)"
+SRHHL Industries Limited,SPTRD578912,2011-12-28,M&A - Whole,Completed,59.632917,Sree Rayalaseema Hi-Strength Hypo Limited (NSEI:SRHHYPOLTD),"TGV SRAAC Limited (BSE:507753); Brilliant Industries Pvt Ltd; Gowri Gopal Hospitals Pvt. Ltd; Sree Rayalaseema Galaxy Projects Ltd.; Sree Rayalaseema Dutch Kassenbouw Private Limited; TGV Projects and Investments Pvt., Ltd.; TGV Avenues LLP",,,933300.417,-9320.608,,,9262.812,,52629.136,9320.608,7.12855721563971,5.19657356750844,,,Renewable Electricity,,Sree Rayalaseema Hi-Strength Hypo Limited (Public Company),,"Sree Rayalaseema Hi-Strength Hypo Limited (4,387.2)","TGV SRAAC Limited (13,549.3)",100,Asia-Pacific,TGV SRAAC Limited (Public Company),,"Sree Rayalaseema Hi-Strength Hypo Limited (4,387.2)","TGV SRAAC Limited (13,549.3)"
+DPSC Limited,SPTRD679210,2009-11-20,M&A - Whole,Completed,1718.55642,Srei Infrastructure Finance Limited (:SREINFRA); Bhaskar Silicon Private Limited,United India Insurance Company Limited; Life Insurance Corporation of India (NSEI:LICI); Andrew Yule & Company Limited (BSE:526173); Bengal Coal Co. Ltd.; Katras Jherriah Coal Company Ltd.,,,,222572,,,3811947,,,41473,14.6058561641506,0.788585429702984,,,Electric Utilities,India Power Corporation Limited (Public Company),,"India Power Corporation Limited (10,670.8)",,"Life Insurance Corporation of India (4,651,425.4); Andrew Yule & Company Limited (10,850.9)",57.17,Asia-Pacific,"Life Insurance Corporation of India (Public Company)
+
+Andrew Yule & Company Limited (Public Company)","India Power Corporation Limited (10,670.8)",,"Andrew Yule & Company Limited (10,850.9)"
+DPSC Limited,SPTRD692350,2005-10-06,M&A - Minority,Completed,18.03448,Environ Energy Tech Service Ltd.,India Power Corporation Limited (NSEI:DPSCLTD),,,,-42624,,,2562013,,,124271,6.19926365062016,0.101834850174453,,,Electric Utilities,India Power Corporation Limited (Public Company),,"India Power Corporation Limited (10,670.8)",,"India Power Corporation Limited (10,670.8)",31,Asia-Pacific,India Power Corporation Limited (Public Company),"India Power Corporation Limited (10,670.8)",,"India Power Corporation Limited (10,670.8)"

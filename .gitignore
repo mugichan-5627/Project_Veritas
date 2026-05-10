@@ -1,0 +1,42 @@
+# Secrets
+.env
+*.env
+
+# Data files (copyrighted or too large)
+data/capiq/*.xlsx
+data/capiq/public_comps/*.xlsx
+data/capiq/precedent_transactions/*.csv
+data/knowledge_base/*.pdf
+knowledge_base/*.pdf
+icra_methodologies/*.pdf
+
+# ChromaDB (too large, hosted on HuggingFace instead)
+chroma_db/
+project_veritas/memory/chroma_db/
+*.sqlite3
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Model weights (too large)
+*.bin
+*.pt
+*.ckpt
+models/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and reports
+*.log
+reports/*.html
+
+# Keep folder structure but not contents
+!data/capiq/.gitkeep
+!data/knowledge_base/.gitkeep
+!reports/.gitkeep

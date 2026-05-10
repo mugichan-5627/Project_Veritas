@@ -1,0 +1,28 @@
+,Target/Issuer Name,MI Transaction ID,"Announced Date
+MM/dd/yyyy",Transaction Type,Transaction Status,"Total Transaction Value
+(₹M)",Buyers/Investors Name,Sellers Name,"Debt Percent of Total Value
+(%)","Target Debt Value
+(₹000)","Buyer: CIQ Net Debt
+(₹000)","Target: CIQ Net Debt
+(₹000)","Buyer: Total Revenue
+(₹000)","Buyer: EBITDA
+(₹000)","Target: CIQ Total Revenue
+(₹000)","Target: EBITDA
+(₹000)","Buyer: CIQ Cash and Short Term Investments
+(₹000)","Target: CIQ Cash and Short Term Investments
+(₹000)","Implied Enterprise Value/ EBITDA
+(x)","Implied Enterprise Value/ Total Revenue
+(x)","Recurring EBITDA Margin
+(%)","Return on Capital
+(%)",Transaction Industry (CIQ/GICS),"Company Type
+(Target/Issuer)","Company Type
+(Buyer/Investor)","Total Enterprise Value (CIQ) (₹M)
+(Target/Issuer) (> 1,000) [Current]","Total Enterprise Value (CIQ) (₹M)
+(Buyer/Investor) (> 1,000) [Current]","Total Enterprise Value (CIQ) (₹M)
+(Seller) (> 1,000) [Current]","Percent of Equity Ownership Acquired
+(%)",Transaction Geography,"Company Type
+(Seller)","Total Enterprise Value (CIQ) (₹M)
+(Target/Issuer) (< 50,000) [Current]","Total Enterprise Value (CIQ) (₹M)
+(Buyer/Investor) (< 50,000) [Current]","Total Enterprise Value (CIQ) (₹M)
+(Seller) (< 50,000) [Current]"
+0,SPTR_TARGET_NAME,SPTR_MI_TRANSACTION_ID,SPTR_ANN_DATE,SPTR_TRANSACTION_TYPE,SPTR_STATUS,SPTR_TRANSACTION_VALUE,324281,324283,SPTR_DEBT_PERCENT,SPTR_TARGET_DEBT_CONSIDERATION,SPTR_BUYER_CIQ_NET_DEBT,SPTR_TARGET_CIQ_NET_DEBT,SPTR_BUYER_TOTAL_REV,SPTR_BUYER_EBITDA,SPTR_TARGET_CIQ_TOTAL_REV,SPTR_TARGET_EBITDA,SPTR_BUYER_CIQ_CASH_STI,SPTR_TARGET_CIQ_CASH_STI,IQ_TR_IMPLIED_EV_EBITDA,IQ_TR_IMPLIED_EV_REV,SPTR_SNL_REC_EBITDA_MARGIN,SPTR_SNL_RETURN_ON_CAPITAL,SPTR_IQ_TARGET_PRIMARY_INDUSTRY,,,,,,SPTR_PCT_EQUITY_ACQUIRED,326140,,,,
