@@ -52,8 +52,8 @@ def get_embedding_model():
 
 def safe_llm_call(messages, temperature=0.1, max_tokens=1500, model=None):
     """
-    Wraps LLM calls with exponential backoff and rate-limit handling.
-    Crucial for hackathons where API credits or RPM limits are tight.
+    Wraps LLM calls with robust exponential backoff and randomized jitter.
+    Optimized for high-concurrency multi-agent pipelines on AMD/NVIDIA infrastructure.
     """
     import time
     import random
@@ -65,12 +65,12 @@ def safe_llm_call(messages, temperature=0.1, max_tokens=1500, model=None):
 
     target_model = model or get_nvidia_model()
     
-    # Check if we should fallback to 8B for better throughput if it's not a 'critical' reasoning step
-    # but for now, we'll just stick to the requested model with retries.
+    max_retries = 8  # Increased for stability
+    base_delay = 3.5 # Increased base delay
     
-    max_retries = 5
-    base_delay = 2 # Start with 2 seconds
-    
+    # Random initial jitter to prevent 'thundering herd' when parallel agents start
+    time.sleep(random.uniform(0.1, 0.8))
+
     for attempt in range(max_retries):
         try:
             response = client.chat.completions.create(
@@ -82,22 +82,27 @@ def safe_llm_call(messages, temperature=0.1, max_tokens=1500, model=None):
             return response
         except RateLimitError as e:
             if attempt == max_retries - 1:
-                raise Exception("Too Many Requests. Rate limited. Try after a while.")
+                raise Exception(f"Final Attempt Failed: Too Many Requests. [Model: {target_model}]")
             
-            # Exponential backoff with jitter
-            delay = (base_delay * (2 ** attempt)) + random.uniform(0, 1)
-            print(f"    [RATE LIMIT] Hit limit on {target_model}. Waiting {delay:.1f}s (Attempt {attempt+1}/{max_retries})...")
+            # Exponential backoff with aggressive jitter
+            delay = (base_delay * (1.5 ** attempt)) + random.uniform(1, 4)
+            print(f"    [RATE LIMIT] {target_model} busy. Backing off {delay:.1f}s (Attempt {attempt+1}/{max_retries})...")
             time.sleep(delay)
             
         except APIError as e:
-            if "rate limit" in str(e).lower():
+            err_msg = str(e).lower()
+            if "rate limit" in err_msg or "too many requests" in err_msg or "429" in err_msg:
                 if attempt == max_retries - 1:
-                    raise Exception("Rate limit hit. Please check your API quota.")
-                delay = (base_delay * (2 ** attempt)) + random.uniform(0, 1)
+                    raise Exception(f"API Rate Limit persistent after {max_retries} retries. Please check quota.")
+                delay = (base_delay * (1.5 ** attempt)) + random.uniform(1, 4)
                 time.sleep(delay)
                 continue
             raise e
         except Exception as e:
+            # For other exceptions (network etc), try once more
+            if attempt < 2:
+                time.sleep(1)
+                continue
             raise e
             
     return None

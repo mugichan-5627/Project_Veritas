@@ -317,12 +317,42 @@ with st.sidebar:
     @st.cache_data(ttl=3600)
     def get_ticker_sector(t):
         if not t: return "Technology"
+        # Hardcoded fallback for popular tickers (Zero-latency)
+        POPULAR_MAP = {
+            "DIS": "Communication Services",
+            "NVDA": "Technology",
+            "AAPL": "Technology",
+            "MSFT": "Technology",
+            "GOOG": "Communication Services",
+            "GOOGL": "Communication Services",
+            "AMZN": "Consumer Cyclical",
+            "TSLA": "Consumer Cyclical",
+            "META": "Communication Services",
+            "BRK-B": "Financial Services",
+            "V": "Financial Services",
+            "MA": "Financial Services",
+            "JPM": "Financial Services",
+            "AXP": "Financial Services",
+            "GS": "Financial Services",
+            "MS": "Financial Services",
+            "WMT": "Consumer Defensive",
+            "PG": "Consumer Defensive",
+            "JNJ": "Healthcare",
+            "UNH": "Healthcare",
+            "XOM": "Energy",
+            "CVX": "Energy",
+        }
+        if t in POPULAR_MAP:
+            return POPULAR_MAP[t]
+
         try:
             import yfinance as yf
             ticker_obj = yf.Ticker(t)
-            # Try to get sector from info
-            s = ticker_obj.info.get('sector', 'Technology')
-            return s
+            s = ticker_obj.info.get('sector')
+            if not s:
+                # Try fast info
+                s = ticker_obj.fast_info.get('sector')
+            return s or "Technology"
         except:
             return "Technology"
 
@@ -345,7 +375,8 @@ with st.sidebar:
         "Real Estate": "Real Estate",
         "Consumer Cyclical": "Consumer Cyclical",
         "Consumer Defensive": "Consumer Defensive",
-        "Communication Services": "Communication Services"
+        "Communication Services": "Communication Services",
+        "Communication": "Communication Services"
     }
 
     raw_sector = get_ticker_sector(ticker)
@@ -371,6 +402,11 @@ with st.sidebar:
         key="sector_selector"
     )
     st.session_state.selected_sector = sector
+    
+    # Check if Vector DB exists
+    db_path = Path("project_veritas/memory/chroma_db")
+    if not db_path.exists():
+        st.warning("⚠️ Vector DB not found. RAG context will be disabled. Run `download_db.py` if local.")
     
     if st.button("Reset Session & Model"):
         st.cache_resource.clear()

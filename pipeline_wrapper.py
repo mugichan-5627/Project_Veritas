@@ -41,16 +41,20 @@ class VeritasPipeline:
             rag_ctx = results["rag_context"]
 
             # Step 4: Debate
+            import time
+            time.sleep(1.2) # Cooling delay for API resilience
             self.progress_callback("DEBATE", f"Initiating multi-agent Bull/Bear debate...")
             debate_res = run_nvidia_debate(deal_context, rag_ctx)
             results["debate_results"] = debate_res
 
             # Step 5: IC Decision
+            time.sleep(1.2) # Cooling delay for API resilience
             self.progress_callback("IC_DECISION", f"Running Investment Committee decision agent...")
             ic_decision = run_nvidia_ic_decision(deal_context, debate_res)
             results["ic_decision"] = ic_decision
 
             # Step 6: Canonical Verdict
+            time.sleep(0.5)
             self.progress_callback("FINALIZING", f"Synthesizing final investment memo...")
             final_verdict = build_canonical_verdict(deal_context, ic_decision, debate_res)
             results["final_verdict"] = final_verdict
