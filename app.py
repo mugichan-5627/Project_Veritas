@@ -268,17 +268,32 @@ def get_pipeline():
 # Sidebar
 with st.sidebar:
     st.header("🔑 Credentials")
-    ui_nv_key = st.text_input("NVIDIA / Fireworks API Key", type="password", help="Enter your nvapi- or fw_ key")
-    ui_tv_key = st.text_input("Tavily API Key", type="password", help="Enter your tvly- key")
     
-    # Mirror keys to environment (Immediate Injection)
-    if ui_nv_key: 
-        os.environ["NVIDIA_API_KEY"] = ui_nv_key
-        if ui_nv_key.startswith("fw_"):
-            os.environ["FIREWORKS_API_KEY"] = ui_nv_key
-            
-    if ui_tv_key: 
-        os.environ["TAVILY_API_KEY"] = ui_tv_key
+    # Check st.secrets (Streamlit Cloud best practice)
+    s_nv_key = st.secrets.get("NVIDIA_API_KEY") or st.secrets.get("FIREWORKS_API_KEY")
+    s_tv_key = st.secrets.get("TAVILY_API_KEY")
+    
+    if s_nv_key:
+        os.environ["NVIDIA_API_KEY"] = s_nv_key
+        if s_nv_key.startswith("fw_"):
+            os.environ["FIREWORKS_API_KEY"] = s_nv_key
+        st.success("LLM Key loaded from Secrets")
+        ui_nv_key = s_nv_key
+    else:
+        ui_nv_key = st.text_input("NVIDIA / Fireworks API Key", type="password", help="Enter your nvapi- or fw_ key")
+        if ui_nv_key:
+            os.environ["NVIDIA_API_KEY"] = ui_nv_key
+            if ui_nv_key.startswith("fw_"):
+                os.environ["FIREWORKS_API_KEY"] = ui_nv_key
+
+    if s_tv_key:
+        os.environ["TAVILY_API_KEY"] = s_tv_key
+        st.success("Search Key loaded from Secrets")
+        ui_tv_key = s_tv_key
+    else:
+        ui_tv_key = st.text_input("Tavily API Key", type="password", help="Enter your tvly- key")
+        if ui_tv_key:
+            os.environ["TAVILY_API_KEY"] = ui_tv_key
     
     st.header("System Status")
     # We check os.environ directly to confirm the backend sees them

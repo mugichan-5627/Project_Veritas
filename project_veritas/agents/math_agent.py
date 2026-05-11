@@ -4,7 +4,7 @@ import re
 import time
 import logging
 from typing import Dict, Any, Optional
-from project_veritas.core.llm_config import get_nvidia_model, get_nvidia_client, get_embedding_model
+from project_veritas.core.llm_config import get_nvidia_model, get_nvidia_client, get_embedding_model, safe_llm_call
 
 logger = logging.getLogger(__name__)
 
@@ -135,18 +135,17 @@ def run_math_agent(ticker: str, industry: str, raw_data: dict, peers: list = Non
         # Use the new dynamic message building logic
         prompt = build_math_agent_message(raw_data, rag_chunks)
         
-        # Centralized model getter used below
-        max_retries = 3
-        for attempt in range(max_retries):
+        # safe_llm_call handles retries and rate limits internally
+        response = safe_llm_call(
+            messages=[
+                {"role": "system", "content": MATH_AGENT_SYSTEM_PROMPT},
+                {"role": "user", "content": prompt}
+            ],
+            temperature=0.05
+        )
+        
+        if response:
             try:
-                response = client.chat.completions.create(
-                    model=get_nvidia_model(),
-                    messages=[
-                        {"role": "system", "content": MATH_AGENT_SYSTEM_PROMPT},
-                        {"role": "user", "content": prompt}
-                    ],
-                    temperature=0.05
-                )
                 txt = response.choices[0].message.content
                 match = re.search(r'(\{[\s\S]*\})', txt)
                 if match:
@@ -178,9 +177,7 @@ def run_math_agent(ticker: str, industry: str, raw_data: dict, peers: list = Non
                         
                     return res
             except Exception as e:
-                if attempt == max_retries - 1:
-                    logger.error(f"Math Agent final failure: {e}")
-                time.sleep(1)
+                logger.error(f"Math Agent parse error: {e}")
     except Exception as e:
         logger.error(f"Math Agent exception: {e}")
     return None

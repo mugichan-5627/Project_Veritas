@@ -34,7 +34,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from project_veritas.agents.math_agent import run_math_agent
 from project_veritas.agents.rag_agent import build_dynamic_rag_query, retrieve_knowledge
-from project_veritas.core.llm_config import get_nvidia_model, get_nvidia_client, get_embedding_model
+from project_veritas.core.llm_config import get_nvidia_model, get_nvidia_client, get_embedding_model, safe_llm_call
 
 # =====================================================================
 # GLOBAL STEP COUNTER
@@ -264,11 +264,7 @@ def test_chromadb_rag(ticker: str = "NVDA", sector: str = "Technology", company_
 
 def run_intel_agent(ticker: str, company_name: str, industry: str, search_results: str):
     """Parses raw Tavily search snippets into structured TAM/Moat logic."""
-    for attempt in range(3):
-        try:
-            client = get_nvidia_client()
-            if not client: return None
-            prompt = f"""You are a Strategic Market Analyst specializing in the {industry} sector.
+    prompt = f"""You are a Strategic Market Analyst specializing in the {industry} sector.
 Based on these search results for {company_name} ({ticker}), extract the TAM, SAM, and SOM (in USD Billions) and summarize the Competitive Moat.
 CRITICAL: Do NOT provide generic theory. Identify the SPECIFIC advantages of {company_name} (e.g., proprietary tech, regulatory capture, switching costs) in the {industry} market.
 IF exact TAM/SAM/SOM numbers are from ancient history, ignore them and provide a RECENT 2024/2025 estimate.
@@ -279,11 +275,14 @@ SEARCH RESULTS:
 Strictly output a JSON object:
 {{"tam_sam_som": "TAM: $XB | SAM: $XB | SOM: $XB", "competitive_moat": "2-3 sentence summary", "forensic_red_flags": ["List any issues"], "management_intel": {{"score": int, "decomposition": {{"vision": int, "execution": int, "governance": int}}, "board": "Independence rating", "flags": ["List any issues"]}}}}
 """
-            response = client.chat.completions.create(
-                model=get_nvidia_model(),
-                messages=[{"role": "user", "content": prompt}],
-                temperature=0.1 + (attempt * 0.1)
-            )
+    # safe_llm_call handles retries and rate limits internally
+    response = safe_llm_call(
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.1
+    )
+    
+    if response:
+        try:
             import re
             match = re.search(r'\{.*\}', response.choices[0].message.content, re.DOTALL)
             if match:
@@ -295,8 +294,9 @@ Strictly output a JSON object:
                     for k in decomp: decomp[k] *= 10
                 return parsed
         except Exception as e:
-            if attempt == 2: print(f"    [!] Intel Agent final failure: {e}")
-            time.sleep(1)
+            print(f"    [!] Intel Agent parse failure: {e}")
+            
+    return None
     return None
 
 # =====================================================================
@@ -905,29 +905,28 @@ PREVIOUS DEBATE:
 Respond with ONLY a raw JSON object:
 {{"headline": "one-line max 80 chars", "argument": "2-3 paragraphs citing specific USD M figures", "evidence_cited": ["example cited value"], "concessions": ["risks you concede"], "conviction_score": 9}}"""
 
-        try:
-            bull_resp = client.chat.completions.create(
-                model=get_nvidia_model(),
-                messages=[{"role": "user", "content": bull_prompt}],
-                max_tokens=1500,
-                temperature=0.7
-            )
+        bull_resp = safe_llm_call(
+            messages=[{"role": "user", "content": bull_prompt}],
+            max_tokens=1500,
+            temperature=0.7
+        )
+        
+        if bull_resp:
             bull_text = bull_resp.choices[0].message.content.strip()
-
             # Try to parse JSON from response
             bull_arg = _parse_debate_response(bull_text, "DEAL_CHAMPION", round_num)
             debate_transcript.append(bull_arg)
             print(f"    Headline: {bull_arg['headline'][:80]}")
             print(f"    Conviction: {bull_arg['conviction_score']}/10")
-        except Exception as e:
-            print(f"    ERROR: {e}")
+        else:
+            print(f"    ERROR: Bull Agent failed to respond")
             bull_arg = {"role": "DEAL_CHAMPION", "round": round_num,
-                       "headline": "API Error", "argument": str(e),
+                       "headline": "API Error", "argument": "LLM failed to respond",
                        "evidence_cited": [], "conviction_score": 5}
             debate_transcript.append(bull_arg)
 
         # Update history
-        history += f"\n[Round {round_num}] DEAL_CHAMPION:\n{bull_arg.get('argument', '')}\n"
+        history += f"\n[Round {round_num}] DEAL_CHAMPION:\n{bull_arg.get('argument', '')}"
 
         # RISK PARTNER (Bear)
         print(f"  [RISK PARTNER] Rebutting...")
@@ -945,23 +944,22 @@ PREVIOUS DEBATE:
 Respond with ONLY a raw JSON object:
 {{"headline": "one-line max 80 chars", "argument": "2-3 paragraphs attacking specific assumptions", "evidence_cited": ["example cited value"], "concessions": ["bull points you concede"], "conviction_score": 7}}"""
 
-        try:
-            bear_resp = client.chat.completions.create(
-                model=get_nvidia_model(),
-                messages=[{"role": "user", "content": bear_prompt}],
-                max_tokens=1500,
-                temperature=0.7
-            )
+        bear_resp = safe_llm_call(
+            messages=[{"role": "user", "content": bear_prompt}],
+            max_tokens=1500,
+            temperature=0.6
+        )
+        
+        if bear_resp:
             bear_text = bear_resp.choices[0].message.content.strip()
-
             bear_arg = _parse_debate_response(bear_text, "RISK_PARTNER", round_num)
             debate_transcript.append(bear_arg)
             print(f"    Headline: {bear_arg['headline'][:80]}")
             print(f"    Conviction: {bear_arg['conviction_score']}/10")
-        except Exception as e:
-            print(f"    ERROR: {e}")
+        else:
+            print(f"    ERROR: Bear Agent failed to respond")
             bear_arg = {"role": "RISK_PARTNER", "round": round_num,
-                       "headline": "API Error", "argument": str(e),
+                       "headline": "API Error", "argument": "LLM failed to respond",
                        "evidence_cited": [], "conviction_score": 5}
             debate_transcript.append(bear_arg)
 
@@ -1139,12 +1137,12 @@ Respond with ONLY a raw JSON object:
 }}
 """
 
-    try:
-        response = client.chat.completions.create(
-            model=get_nvidia_model(),
-            messages=[{"role": "user", "content": ic_prompt}],
-            temperature=0.1
-        )
+    response = safe_llm_call(
+        messages=[{"role": "user", "content": ic_prompt}],
+        temperature=0.1
+    )
+    
+    if response:
         ic_text = response.choices[0].message.content.strip()
         import re
         match = re.search(r'\{.*\}', ic_text, re.DOTALL)
