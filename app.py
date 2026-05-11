@@ -270,8 +270,15 @@ with st.sidebar:
     st.header("🔑 Credentials")
     
     # Check st.secrets (Streamlit Cloud best practice)
-    s_nv_key = st.secrets.get("NVIDIA_API_KEY") or st.secrets.get("FIREWORKS_API_KEY")
-    s_tv_key = st.secrets.get("TAVILY_API_KEY")
+    s_nv_key = None
+    s_tv_key = None
+    try:
+        if st.secrets:
+            s_nv_key = st.secrets.get("NVIDIA_API_KEY") or st.secrets.get("FIREWORKS_API_KEY")
+            s_tv_key = st.secrets.get("TAVILY_API_KEY")
+    except:
+        # st.secrets not configured or locally missing, which is fine
+        pass
     
     if s_nv_key:
         os.environ["NVIDIA_API_KEY"] = s_nv_key
