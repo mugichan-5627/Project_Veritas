@@ -314,27 +314,63 @@ with st.sidebar:
     ticker = st.text_input("Ticker Symbol", value="AXP").upper()
     
     # Auto-detect sector from yfinance and show it (Fix requested)
-    sector_default_idx = 0
+    @st.cache_data(ttl=3600)
+    def get_ticker_sector(t):
+        if not t: return "Technology"
+        try:
+            import yfinance as yf
+            ticker_obj = yf.Ticker(t)
+            # Try to get sector from info
+            s = ticker_obj.info.get('sector', 'Technology')
+            return s
+        except:
+            return "Technology"
+
     sectors = [
         "Financial Services", "Technology", "Healthcare", "Industrials", 
         "Consumer Cyclical", "Energy", "Communication Services", "Consumer Defensive",
         "Utilities", "Real Estate", "Basic Materials"
     ]
-    # Auto-detect sector from yfinance and show it
-    # Let user override if needed
-    if ticker:
-        try:
-            import yfinance as yf
-            info = yf.Ticker(ticker).info
-            auto_sector = info.get('sector', 'Unknown')
-            st.caption(f"Auto-detected sector: {auto_sector}")
-            sector_default = auto_sector
-        except:
-            sector_default = "Industrials"
-    else:
-        sector_default = "Technology"
+    
+    # Map yfinance sector names to our list if they differ
+    YF_MAP = {
+        "Financial": "Financial Services",
+        "Services": "Industrials",
+        "Technology": "Technology",
+        "Healthcare": "Healthcare",
+        "Industrial Goods": "Industrials",
+        "Basic Materials": "Basic Materials",
+        "Energy": "Energy",
+        "Utilities": "Utilities",
+        "Real Estate": "Real Estate",
+        "Consumer Cyclical": "Consumer Cyclical",
+        "Consumer Defensive": "Consumer Defensive",
+        "Communication Services": "Communication Services"
+    }
 
-    sector = st.selectbox("Industry Sector", sectors, index=sectors.index(sector_default) if sector_default in sectors else 0)
+    raw_sector = get_ticker_sector(ticker)
+    sector_default = YF_MAP.get(raw_sector, raw_sector if raw_sector in sectors else "Technology")
+    
+    if ticker:
+        st.caption(f"Auto-detected sector: {raw_sector}")
+
+    # Use session state to allow the auto-detection to trigger only when ticker changes
+    if "prev_ticker" not in st.session_state:
+        st.session_state.prev_ticker = ticker
+    
+    if ticker != st.session_state.prev_ticker:
+        st.session_state.prev_ticker = ticker
+        st.session_state.selected_sector = sector_default
+    elif "selected_sector" not in st.session_state:
+        st.session_state.selected_sector = sector_default
+
+    sector = st.selectbox(
+        "Industry Sector", 
+        sectors, 
+        index=sectors.index(st.session_state.selected_sector) if st.session_state.selected_sector in sectors else 1,
+        key="sector_selector"
+    )
+    st.session_state.selected_sector = sector
     
     if st.button("Reset Session & Model"):
         st.cache_resource.clear()

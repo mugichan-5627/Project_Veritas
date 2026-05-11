@@ -1137,38 +1137,38 @@ Respond with ONLY a raw JSON object:
 }}
 """
 
-    response = safe_llm_call(
-        messages=[{"role": "user", "content": ic_prompt}],
-        temperature=0.1
-    )
-    
-    if response:
-        ic_text = response.choices[0].message.content.strip()
-        import re
-        match = re.search(r'\{.*\}', ic_text, re.DOTALL)
-        if match:
-            res = json.loads(match.group(0))
-            if "max_entry_price" not in res and "max_entry_ev" in res:
-                res["max_entry_price"] = res["max_entry_ev"] / deal_context.get('financial_data', {}).get('shares_outstanding_M', 1)
-            if "decision" not in res and "verdict" in res:
-                res["decision"] = res["verdict"]
-            if "conditions" not in res and "key_conditions" in res:
-                res["conditions"] = res["key_conditions"]
-            canonical = build_canonical_verdict(deal_context, res, debate_result)
-            res.update({
-                "decision": canonical["decision"],
-                "verdict": canonical["decision"],
-                "conviction_level": res.get("conviction_level") or canonical["conviction"],
-                "reasoning": _as_list(res.get("reasoning")) or canonical["reasoning"],
-                "conditions": _as_list(res.get("conditions")) or canonical["conditions"],
-                "max_entry_price": canonical["max_entry_price"],
-            })
-            deal_context["ic_decision"] = res
-            
-            # Print Verdict
-            print(f"  IC VERDICT: {res.get('decision', 'N/A')}")
-            return res
-            
+    try:
+        response = safe_llm_call(
+            messages=[{"role": "user", "content": ic_prompt}],
+            temperature=0.1
+        )
+        
+        if response:
+            ic_text = response.choices[0].message.content.strip()
+            import re
+            match = re.search(r'\{.*\}', ic_text, re.DOTALL)
+            if match:
+                res = json.loads(match.group(0))
+                if "max_entry_price" not in res and "max_entry_ev" in res:
+                    res["max_entry_price"] = res["max_entry_ev"] / deal_context.get('financial_data', {}).get('shares_outstanding_M', 1)
+                if "decision" not in res and "verdict" in res:
+                    res["decision"] = res["verdict"]
+                if "conditions" not in res and "key_conditions" in res:
+                    res["conditions"] = res["key_conditions"]
+                canonical = build_canonical_verdict(deal_context, res, debate_result)
+                res.update({
+                    "decision": canonical["decision"],
+                    "verdict": canonical["decision"],
+                    "conviction_level": res.get("conviction_level") or canonical["conviction"],
+                    "reasoning": _as_list(res.get("reasoning")) or canonical["reasoning"],
+                    "conditions": _as_list(res.get("conditions")) or canonical["conditions"],
+                    "max_entry_price": canonical["max_entry_price"],
+                })
+                deal_context["ic_decision"] = res
+                
+                # Print Verdict
+                print(f"  IC VERDICT: {res.get('decision', 'N/A')}")
+                return res
     except Exception as e:
         print(f"  ERROR: {e}")
         fallback = build_canonical_verdict(deal_context, {"reasoning": [f"IC Agent error: {e}"]}, debate_result)
